@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome - NoteApp{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+        <h1 class="display-4 mb-4">
+            <i class="fas fa-sticky-note text-primary"></i>
+            Welcome to NoteApp
+        </h1>
+        <p class="lead mb-4">
+            Your personal note-taking companion with powerful features like reminders, pinning, and editing.
+        </p>
+        
+        <div class="row mb-5">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-edit fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Create & Edit</h5>
+                        <p class="card-text">Write, edit, and organize your notes easily!!.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-thumbtack fa-3x text-warning mb-3"></i>
+                        <h5 class="card-title">Pin Important</h5>
+                        <p class="card-text">Pin your most important notes to keep them at the top.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-bell fa-3x text-danger mb-3"></i>
+                        <h5 class="card-title">Set Reminders</h5>
+                        <p class="card-text">Never miss important tasks with personal reminders.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-grid gap-2 d-md-block">
+            <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg me-md-2">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </a>
+            <a href="{{ url_for('register') }}" class="btn btn-outline-primary btn-lg">
+                <i class="fas fa-user-plus"></i> Register
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %} 
